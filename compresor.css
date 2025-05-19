@@ -1,0 +1,225 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background-color: #003087;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-logo {
+    height: 70px;
+    margin-left: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.header-button {
+    background-color: #0055b8;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.header-button:hover {
+    background-color: #007bff;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    position: fixed;
+    top: 100px; /* Aumentado de 90px a 100px para que no se solape con el header más grande */
+    left: 0;
+    z-index: 999;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Formulario */
+.form-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 170px auto 20px auto;
+    flex: 1 0 auto;
+}
+
+.form-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-icon {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+#pdfUploadForm {
+    margin: 20px 0;
+}
+
+#pdfFiles {
+    margin-left: 10px;
+}
+
+#fileStatus {
+    margin: 10px 0;
+    font-style: italic;
+    color: #6c757d;
+}
+
+#submitButton {
+    padding: 10px 20px;
+    background-color: #003087;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submitButton:hover {
+    background-color: #0055b8;
+}
+
+#submitButton:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+/* Footer */
+.footer {
+    background-color: #e9ecef;
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    min-height: 100px; /* Añadido para asegurar que el footer sea completamente visible */
+}
+
+.footer-logo {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    margin: 5px 0;
+    color: #343a40;
+    font-size: 18px;
+}
+
+.footer a {
+    color: #003087;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para ToastrJS */
+.toast-success {
+    background-color: #2e7d32 !important;
+    color: #ffffff !important;
+}
+
+.toast-error {
+    background-color: #b71c1c !important;
+    color: #ffffff !important;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .header-logo {
+        height: 50px;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .header-button {
+        margin-top: 10px;
+        margin-right: 0;
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    .banner {
+        top: 110px; /* Ajustado para pantallas pequeñas */
+    }
+
+    .form-container {
+        width: 95%;
+        margin: 150px auto 20px auto;
+    }
+
+    .form-card {
+        padding: 15px;
+    }
+
+    .form-icon {
+        height: 40px;
+    }
+
+    .footer {
+        padding: 20px 10px;
+        min-height: 80px; /* Ajustado para pantallas pequeñas */
+    }
+
+    .footer-logo {
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .footer p {
+        font-size: 14px;
+    }
+}
